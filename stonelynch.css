@@ -1,0 +1,71 @@
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 11% 4% repeat(3, 1fr) 5%;
+  grid-template-areas:
+    "banner-bg logo banner-bg"
+    "banner-bg navbar banner-bg"
+    "main_page main_page main_page"
+    "main_page main_page main_page"
+    "main_page main_page main_page"
+    "footer footer footer";
+  grid-gap: 0;
+  padding: 0 0;
+  margin: 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+.banner {
+  grid-area: banner;
+  background-color: green;
+}
+
+.main_page {
+  grid-area: main_page;
+  background-color: gray;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: cyan;
+}
+
+
+
+
+
+nav {
+  margin-top: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0 auto;
+    width: 33%;
+    overflow: hidden;
+    background-color: #333;
+    padding:auto 0;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav li a:hover {
+    background-color: #ff0000;
+}
+
+nav .active {
+    background-color: #4CAF50;
+}
