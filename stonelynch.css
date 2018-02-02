@@ -1,35 +1,79 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 11% 4% repeat(3, 1fr) 5%;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: 11% 4% 5% 5%;
   grid-template-areas:
-    "banner-bg logo banner-bg"
-    "banner-bg navbar banner-bg"
-    "main_page main_page main_page"
-    "main_page main_page main_page"
-    "main_page main_page main_page"
+    "banner-bg logo banner-bg2"
+    "banner-bg navbar banner-bg2"
+    "banner-bg main_page banner-bg2"
     "footer footer footer";
-  grid-gap: 0;
-  padding: 0 0;
-  margin: 0 0;
   width: 100%;
   height: 100%;
 }
 
-.banner {
-  grid-area: banner;
-  background-color: green;
+.banner-bg {
+    grid-area: banner-bg;
+    background-color: green;
+}
+
+.banner-bg2 {
+    grid-area: banner-bg2;
+    background-color: green;
+}
+
+.logo {
+    grid-area: logo;
+    text-align: center;
+    color: palegoldenrod;
+    background-image: url(images/woods.jpg);
+    font-family: fantasy;
+    font-size: 50pt;
+}
+
+.navbar {
+    grid-area: navbar;
 }
 
 .main_page {
-  grid-area: main_page;
-  background-color: gray;
+    grid-area: main_page;
+    background-color: aliceblue;
+    height: auto;
+}
+
+.main_page p {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.main_page h1 {
+    text-align: center;
+}
+
+.contact_main_page{
+    grid-area: main_page;
+    background-color: aliceblue;
+    height: auto;
+}
+
+.contact_main_page p {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 .footer {
-  grid-area: footer;
-  background-color: cyan;
+    grid-area: footer;
+    background-color: skyblue;
+    text-align: center;
+    position: absolute;
+    bottom:0;
+    height:auto;
+    width:100%;
+    padding: 3px 0;
 }
 
 
@@ -37,20 +81,23 @@
 
 
 nav {
-  margin-top: 0;
+    
 }
 
 nav ul {
     list-style-type: none;
+    list-style: none;
     margin: 0 auto;
-    width: 33%;
+    width: inherit;
     overflow: hidden;
     background-color: #333;
-    padding:auto 0;
+    padding:0;
 }
 
 nav li {
-    float: left;
+    float:left;
+    display:inline-block;
+    width: 25%;
 }
 
 nav li a {
@@ -59,13 +106,22 @@ nav li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 20pt;
+    font-family:fantasy;
+    color: palegoldenrod;
 }
 
 /* Change the link color to #111 (black) on hover */
 nav li a:hover {
-    background-color: #ff0000;
+    background-color: palegoldenrod;
+    color:black;
 }
 
 nav .active {
     background-color: #4CAF50;
+}
+
+body {
+    margin:0;
+    height:100%;
 }
